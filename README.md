@@ -42,8 +42,6 @@ A secure and interactive desktop application built with Python that allows users
 ## 🏗️ Project Structure
 Image-Steganography-GUI/
 
-│
-
 ├── main.py                # App entry point
 
 ├── login.py               # Login & signup logic
