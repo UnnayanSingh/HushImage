@@ -40,10 +40,16 @@ A secure and interactive desktop application built with Python that allows users
 ---
 
 ## 🏗️ Project Structure
-├── image_steganography_app.py # Main application file
-├── logo.jpg # Optional UI/logo image
-├── requirements.txt # Python dependencies
-└── README.md # This file
+Image-Steganography-GUI/
+│
+├── main.py                # App entry point
+├── login.py               # Login & signup logic
+├── steganography.py       # Hide/Extract logic
+├── export.py              # Export to PDF/CSV
+├── config.py              # Database configs
+├── README.md              # You're here!
+├── requirements.txt
+└── ...
 
 ---
 
