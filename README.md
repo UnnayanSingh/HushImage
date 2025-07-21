@@ -63,9 +63,13 @@ Image-Steganography-GUI/
 ### `requirements.txt`:
 ```txt```
 mysql-connector-python
+
 cryptography
+
 pillow
+
 stegano
+
 reportlab
 
 ---
