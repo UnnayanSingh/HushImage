@@ -1,6 +1,6 @@
-# 🖼️ Image Steganography App - Desktop GUI
+# 🖼️ Image Steganography - GUI
 
-A secure and interactive desktop application built with Python that allows users to hide encrypted messages inside images using steganography. The app includes login/signup, password protection, AES encryption, message history logging in MySQL, and export options in PDF/CSV.
+A secure and interactive GUI built with Python that allows users to hide encrypted messages inside images using steganography. The app includes login/signup, password protection, AES encryption, message history logging in MySQL, and export options in PDF/CSV.
 
 ---
 
