@@ -109,7 +109,7 @@ def forgot_password():
         reset_win.destroy()
 
     reset_win = tk.Toplevel(root)
-    reset_win.title("Reset Password")
+    reset_win.title("HushImage - Reset Password")
     reset_win.geometry("300x200")
 
     tk.Label(reset_win, text="Enter Username:").pack(pady=5)
@@ -125,7 +125,7 @@ def forgot_password():
 # --- Main Steganography Window ---
 def open_steganography_gui(user_id, username):
     app = tk.Tk()
-    app.title("Image Steganography")
+    app.title("HushImage - Dashboard")
     app.geometry("800x650")
     app.configure(bg="#2f4155")
 
@@ -259,7 +259,7 @@ def open_steganography_gui(user_id, username):
 
     def show_message_history():
         history_win = tk.Toplevel(app)
-        history_win.title("Message History")
+        history_win.title("HushImage - Message History")
         history_win.geometry("600x450")
         history_win.configure(bg="#2f4155")
 
@@ -315,7 +315,7 @@ def open_steganography_gui(user_id, username):
 def start_login_window():
     global entry_user, entry_pass, root
     root = tk.Tk()
-    root.title("Login / Signup")
+    root.title("HushImage - Login / Signup")
     root.geometry("350x300")
 
     tk.Label(root, text="Username").pack(pady=5)
