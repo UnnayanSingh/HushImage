@@ -1,75 +1,71 @@
-# 🖼️ Image Steganography - GUI
+# 🔒 HushImage – Secure Image Steganography (GUI)
 
-A secure and interactive GUI built with Python that allows users to hide encrypted messages inside images using steganography. The app includes login/signup, password protection, AES encryption, message history logging in MySQL, and export options in PDF/CSV.
+**HushImage** is a secure and interactive GUI application built with Python that allows users to **hide encrypted messages inside images** using steganography.  
+It features user authentication, AES encryption, history logging with MySQL, and export options in PDF/CSV.
 
 ---
 
 ## 📌 Features
 
 - 🔐 **User Authentication**
-  - Signup/Login with SHA-256 password hashing
-  - Forgot password reset functionality
+  - Signup/Login with SHA-256 password hashing  
+  - Password reset functionality  
 
 - 🔒 **AES Encryption**
-  - Messages are encrypted using Fernet (AES-128) before embedding
+  - Messages are encrypted with Fernet (AES-128) before embedding  
 
 - 🖼 **Image Steganography**
-  - Uses `stegano.lsb` to hide and retrieve messages inside image pixels
+  - Uses `stegano.lsb` to hide and retrieve messages inside image pixels  
 
 - 🗃️ **MySQL Logging**
-  - Stores encrypted messages with image path and timestamp for each user
+  - Stores encrypted messages with image path and timestamp per user  
 
 - 📑 **Message History**
-  - View all previously hidden messages
-  - Export history to CSV or PDF reports
+  - View previously hidden messages  
+  - Export history to **CSV** or **PDF**  
 
-- 🧠 **Simple and User-Friendly UI**
-  - Built with Tkinter and Pillow for image display
+- 🧠 **Simple & User-Friendly GUI**
+  - Built with **Tkinter** and **Pillow** for image handling  
 
 ---
 
 ## 🧰 Tech Stack
 
-| Layer       | Technology                                      |
-|-------------|-------------------------------------------------|
-| **Frontend**  | `Tkinter`, `Pillow (PIL)`                      |
+| Layer         | Technology                                      |
+|---------------|------------------------------------------------|
+| **Frontend**  | `Tkinter`, `Pillow (PIL)`                       |
 | **Backend**   | `Python`, `stegano`, `cryptography`, `hashlib` |
-| **Database**  | `MySQL` (`mysql.connector`)                    |
-| **Utilities** | `reportlab`, `csv`, `os`, `base64`, `time`     |
+| **Database**  | `MySQL` (`mysql.connector`)                     |
+| **Utilities** | `reportlab`, `csv`, `os`, `base64`, `time`      |
 
 ---
 
 ## 🏗️ Project Structure
-Image-Steganography-GUI/
+HushImage/
 
-├── main.py                # App entry point
+│── main.py # App entry point
 
-├── login.py               # Login & signup logic
+│── login.py # Login & signup logic
 
-├── steganography.py       # Hide/Extract logic
+│── steganography.py # Hide/Extract logic
 
-├── export.py              # Export to PDF/CSV
+│── export.py # Export to PDF/CSV
 
-├── config.py              # Database configs
+│── config.py # Database configs
 
-├── README.md              # You're here!
+│── requirements.txt # Dependencies
 
-├── requirements.txt
-
-└── ...
 
 ---
 
-### `requirements.txt`:
-```txt```
+## ⚙️ Requirements
+
+Inside `requirements.txt`:
+
 mysql-connector-python
-
 cryptography
-
 pillow
-
 stegano
-
 reportlab
 
 ---
@@ -78,28 +74,44 @@ reportlab
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/image-steganography-gui.git
-cd image-steganography-gui
-
+git clone https://github.com/UnnayanSingh/HushImage.git
+cd HushImage
+```
 ### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
-
-### 3. Set Up MySQL Database
+```
+###3. Set Up MySQL Database
 ```sql
-CREATE DATABASE steganography_app;
-
-Update your MySQL credentials in
-`image_steganography_app.py`:
+CREATE DATABASE hushimage_app;
+```
+```**Update your MySQL credentials in config.py:
 conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="your_password",
-    database="steganography_app"
+  host="localhost",
+  user="root",
+  password="your_password",
+  database="hushimage_app"
 )
-#Tables are automatically created on first run.
-
+```
 ### 4. Run the App
 ```bash
-python image_steganography_app.py
-
+python main.py
+```
+### Architecture Diagram
+```## 🏛️ Architecture
+User → GUI (Tkinter) → Steganography (stegano.lsb) → AES Encryption (cryptography) → MySQL Database (history logs)
+```
+### Security Notes
+```
+## 🔐 Security Notes
+- Images are encrypted using Fernet (AES-128).  
+- Hidden data should not exceed image capacity (larger images allow more data).  
+- Always use strong passwords for message encryption.  
+- This project is for educational purposes and not intended for production-level secrecy.
+```
+### Contact / Author
+## 👨‍💻 Author
+**Unnayan Singh**  
+- GitHub: [UnnayanSingh](https://github.com/UnnayanSingh)  
+- LinkedIn: https://www.linkedin.com/in/unnayan-singh-2b9062289  
+- Email: unnayansingh2005@gmail.com  
