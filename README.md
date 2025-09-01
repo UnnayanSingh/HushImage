@@ -1,4 +1,4 @@
-# 🔒 HushImage – Secure Image Steganography (GUI)
+# HushImage – Secure Image Steganography (GUI)
 
 **HushImage** is a secure and interactive GUI application built with Python that allows users to **hide encrypted messages inside images** using steganography.  
 It features user authentication, AES encryption, history logging with MySQL, and export options in PDF/CSV.
@@ -71,15 +71,20 @@ reportlab
 ```bash
 git clone https://github.com/UnnayanSingh/HushImage.git
 cd HushImage
+
 ```
+
 ### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
+
 ```
 ###3. Set Up MySQL Database
 ```sql
 CREATE DATABASE hushimage_app;
+
 ```
+
 ```**Update your MySQL credentials in config.py:
 conn = mysql.connector.connect(
   host="localhost",
@@ -87,23 +92,26 @@ conn = mysql.connector.connect(
   password="your_password",
   database="hushimage_app"
 )
+
 ```
+
 ### 4. Run the App
 ```bash
 python main.py
+
 ```
+
 ### Architecture Diagram
-```## 🏛️ Architecture
+## 🏛️ Architecture
 User → GUI (Tkinter) → Steganography (stegano.lsb) → AES Encryption (cryptography) → MySQL Database (history logs)
-```
+
 ### Security Notes
-```
 ## 🔐 Security Notes
-<- Images are encrypted using Fernet (AES-128).  
+- Images are encrypted using Fernet (AES-128).  
 - Hidden data should not exceed image capacity (larger images allow more data).  
 - Always use strong passwords for message encryption.  
 - This project is for educational purposes and not intended for production-level secrecy.
-```
+  
 ### Contact / Author
 ## 👨‍💻 Author
 **Unnayan Singh**  
