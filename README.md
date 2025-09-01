@@ -34,80 +34,75 @@
 
 ## 🧰 Tech Stack
 
-| Layer         | Technology                                      |
-|---------------|------------------------------------------------|
-| **Frontend**  | `Tkinter`, `Pillow (PIL)`                       |
-| **Backend**   | `Python`, `stegano`, `cryptography`, `hashlib` |
-| **Database**  | `MySQL` (`mysql.connector`)                     |
-| **Utilities** | `reportlab`, `csv`, `os`, `base64`, `time`      |
+  | Layer         | Technology                                      |
+  |---------------|------------------------------------------------|
+  | **Frontend**  | `Tkinter`, `Pillow (PIL)`                       |
+  | **Backend**   | `Python`, `stegano`, `cryptography`, `hashlib` |
+  | **Database**  | `MySQL` (`mysql.connector`)                     |
+  | **Utilities** | `reportlab`, `csv`, `os`, `base64`, `time`      |
 
 ---
 
 ## 🏗️ Project Structure
 
 ```
-HushImage/
-│── main.py              # App entry point
-│── login.py             # Login & signup logic
-│── steganography.py     # Hide/Extract logic
-│── export.py            # Export to PDF/CSV
-│── config.py            # Database configs
-│── requirements.txt     # Dependencies
+  HushImage/
+  │── main.py              # App entry point
+  │── login.py             # Login & signup logic
+  │── steganography.py     # Hide/Extract logic
+  │── export.py            # Export to PDF/CSV
+  │── config.py            # Database configs
+  │── requirements.txt     # Dependencies
 ```
 ---
 
 ## ⚙️ Requirements
 
 Inside `requirements.txt`:
+```
+- mysql-connector-python
+- cryptography
+- pillow
+- stegano
+- reportlab
 
-mysql-connector-python
-cryptography
-pillow
-stegano
-reportlab
+```
 
 ## 🔧 Setup Instructions
-### 1. Clone the Repository
+  ### 1. Clone the Repository
 ```bash
-git clone https://github.com/UnnayanSingh/HushImage.git
-cd HushImage
-
+  git clone https://github.com/UnnayanSingh/HushImage.git
+  cd HushImage
 ```
 
-### 2. Install Dependencies
+  ### 2. Install Dependencies
 ```bash
-pip install -r requirements.txt
+  pip install -r requirements.txt
 
 ```
-### 3. Set Up MySQL Database
+  ### 3. Set Up MySQL Database
 ```sql
-CREATE DATABASE hushimage_app;
-
-```
-```**Update your MySQL credentials in config.py:
-conn = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="your_password",
-  database="hushimage_app"
-)
+  CREATE DATABASE hushimage_app;
+  conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="your_password",
+    database="hushimage_app");
 
 ```
 
 ### 4. Run the App
 ```bash
-python main.py
+  python main.py
 
 ```
 ---
 
-### Architecture Diagram
-## 🏛️ Architecture
-User → GUI (Tkinter) → Steganography (stegano.lsb) → AES Encryption (cryptography) → MySQL Database (history logs)
+### 🏛️Architecture Diagram
+  ```User → GUI (Tkinter) → Steganography (stegano.lsb) → AES Encryption (cryptography) → MySQL Database (history logs)```
 
 ---
 
-### Security Notes
 ## 🔐 Security Notes
 - Images are encrypted using Fernet (AES-128).  
 - Hidden data should not exceed image capacity (larger images allow more data).  
@@ -116,8 +111,7 @@ User → GUI (Tkinter) → Steganography (stegano.lsb) → AES Encryption (crypt
 
 ---
   
-### Contact Information
-**Unnayan Singh**  
+### Contact Information  
 - GitHub: [UnnayanSingh](https://github.com/UnnayanSingh)  
 - LinkedIn: https://www.linkedin.com/in/unnayan-singh-2b9062289  
 - Email: unnayansingh2005@gmail.com
