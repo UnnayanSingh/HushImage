@@ -54,7 +54,7 @@ HushImage/
 │── config.py            # Database configs
 │── requirements.txt     # Dependencies
 ```
-...
+---
 
 ## ⚙️ Requirements
 
@@ -66,10 +66,7 @@ pillow
 stegano
 reportlab
 
----
-
 ## 🔧 Setup Instructions
-
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/UnnayanSingh/HushImage.git
@@ -82,12 +79,11 @@ cd HushImage
 pip install -r requirements.txt
 
 ```
-###3. Set Up MySQL Database
+### 3. Set Up MySQL Database
 ```sql
 CREATE DATABASE hushimage_app;
 
 ```
-
 ```**Update your MySQL credentials in config.py:
 conn = mysql.connector.connect(
   host="localhost",
@@ -103,10 +99,13 @@ conn = mysql.connector.connect(
 python main.py
 
 ```
+---
 
 ### Architecture Diagram
 ## 🏛️ Architecture
 User → GUI (Tkinter) → Steganography (stegano.lsb) → AES Encryption (cryptography) → MySQL Database (history logs)
+
+---
 
 ### Security Notes
 ## 🔐 Security Notes
@@ -114,10 +113,13 @@ User → GUI (Tkinter) → Steganography (stegano.lsb) → AES Encryption (crypt
 - Hidden data should not exceed image capacity (larger images allow more data).  
 - Always use strong passwords for message encryption.  
 - This project is for educational purposes and not intended for production-level secrecy.
+
+---
   
-### Contact / Author
-## 👨‍💻 Author
+### Contact Information
 **Unnayan Singh**  
 - GitHub: [UnnayanSingh](https://github.com/UnnayanSingh)  
 - LinkedIn: https://www.linkedin.com/in/unnayan-singh-2b9062289  
-- Email: unnayansingh2005@gmail.com  
+- Email: unnayansingh2005@gmail.com
+
+---
