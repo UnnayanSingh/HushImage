@@ -60,11 +60,11 @@
 
 Inside `requirements.txt`:
 ```
-- mysql-connector-python
-- cryptography
-- pillow
-- stegano
-- reportlab
+mysql-connector-python
+cryptography
+pillow
+stegano
+reportlab
 
 ```
 
