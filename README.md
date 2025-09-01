@@ -41,22 +41,17 @@ It features user authentication, AES encryption, history logging with MySQL, and
 ---
 
 ## 🏗️ Project Structure
+
+```
 HushImage/
-
-│── main.py # App entry point
-
-│── login.py # Login & signup logic
-
-│── steganography.py # Hide/Extract logic
-
-│── export.py # Export to PDF/CSV
-
-│── config.py # Database configs
-
-│── requirements.txt # Dependencies
-
-
----
+│── main.py              # App entry point
+│── login.py             # Login & signup logic
+│── steganography.py     # Hide/Extract logic
+│── export.py            # Export to PDF/CSV
+│── config.py            # Database configs
+│── requirements.txt     # Dependencies
+```
+...
 
 ## ⚙️ Requirements
 
@@ -104,7 +99,7 @@ User → GUI (Tkinter) → Steganography (stegano.lsb) → AES Encryption (crypt
 ### Security Notes
 ```
 ## 🔐 Security Notes
-- Images are encrypted using Fernet (AES-128).  
+<- Images are encrypted using Fernet (AES-128).  
 - Hidden data should not exceed image capacity (larger images allow more data).  
 - Always use strong passwords for message encryption.  
 - This project is for educational purposes and not intended for production-level secrecy.
