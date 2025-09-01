@@ -1,6 +1,6 @@
 # HushImage – Secure Image Steganography (GUI)
 
-**HushImage** is a secure and interactive GUI application built with Python that allows users to **hide encrypted messages inside images** using steganography.  
+**HushImage** is a secure and interactive GUI application built with Python that allows users to **hide encrypted messages inside images** using steganography.
 It features user authentication, AES encryption, history logging with MySQL, and export options in PDF/CSV.
 
 ---
